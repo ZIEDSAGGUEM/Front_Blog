@@ -19,7 +19,7 @@ const UpdatePost: React.FC = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8787/posts/${postId}`
+          `${import.meta.env.VITE_API}/posts/${postId}`
         );
         setPost(response.data.post);
       } catch (error: unknown) {
